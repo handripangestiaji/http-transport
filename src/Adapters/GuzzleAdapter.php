@@ -37,6 +37,11 @@ class GuzzleAdapter extends AbstractHttpTransport
         return $this->sendRequest('PUT', $path, $data);
     }
 
+    public function patch(string $path, array $data = []): array
+    {
+        return $this->sendRequest('PATCH', $path, $data);
+    }
+
     public function delete(string $path, array $data = []): array
     {
         return $this->sendRequest('DELETE', $path, $data);
